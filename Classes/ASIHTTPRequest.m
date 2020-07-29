@@ -1219,7 +1219,7 @@ static NSOperationQueue *sharedQueue = nil;
                                            [NSNumber numberWithBool:YES], kCFStreamSSLAllowsAnyRoot,
                                            [NSNumber numberWithBool:NO],  kCFStreamSSLValidatesCertificateChain,
                                            kCFNull,kCFStreamSSLPeerName,
-                                           @"kCFStreamSocketSecurityLevelTLSv1_0SSLv3", kCFStreamSSLLevel,
+                                           kCFStreamSocketSecurityLevelNegotiatedSSL, kCFStreamSSLLevel,
                                            nil];
             
             CFReadStreamSetProperty((CFReadStreamRef)[self readStream],
@@ -1231,7 +1231,7 @@ static NSOperationQueue *sharedQueue = nil;
                                            [NSNumber numberWithBool:NO], kCFStreamSSLAllowsExpiredCertificates,
                                            [NSNumber numberWithBool:NO], kCFStreamSSLAllowsAnyRoot,
                                            [NSNumber numberWithBool:YES],  kCFStreamSSLValidatesCertificateChain,
-                                           @"kCFStreamSocketSecurityLevelTLSv1_0SSLv3", kCFStreamSSLLevel,
+                                           kCFStreamSocketSecurityLevelNegotiatedSSL, kCFStreamSSLLevel,
                                            nil];
             
             CFReadStreamSetProperty((CFReadStreamRef)[self readStream],
